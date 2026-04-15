@@ -2,7 +2,7 @@ CREATE DATABASE LIBRARY;
 USE LIBRARY;
 
 CREATE TABLE BOOK (
-    MaSach CHAR(5) PRIMARY KEY,                 
+    MaSach INT(5) PRIMARY KEY,                 
     TenSach VARCHAR(200) NOT NULL,               
     SoLuong INT NOT NULL CHECK (SoLuong >= 0),   
     GiaThue DECIMAL(10,2) DEFAULT 5000          
@@ -18,3 +18,4 @@ CREATE TABLE BORROW_BOOKS (
     FOREIGN KEY (MaSach) REFERENCES BOOK(MaSach)
 
 );
+
